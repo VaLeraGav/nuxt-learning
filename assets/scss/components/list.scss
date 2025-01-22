@@ -1,0 +1,41 @@
+@use "../abstract/_admin_variables.scss" as *;
+
+.list-elements {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+        display: grid;
+        margin-top: 10px;
+        color: #4d4d4d;
+        padding: 12px 5px;
+        align-items: center;
+        transition: .3s;
+        box-shadow: $admin-box-shadow;
+        border-radius: $border-element;
+        background-color: $background_content_color;
+        grid-template-columns: 30px 30px 30px auto 100px 100px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #ebebeb;
+        }
+    }
+}
+
+.status-green {
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.status-red {
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 50%;
+    background-color: red;
+}

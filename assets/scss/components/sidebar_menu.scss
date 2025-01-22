@@ -1,0 +1,58 @@
+@use "../abstract/_admin_variables.scss" as *;
+
+.wr-sidebar-menu {
+    margin-top: 30px;
+}
+
+.sidebar-menu {
+    padding: 0;
+    margin: 0;
+
+    &>li {
+        list-style: none;
+
+        a {
+            padding: 3px;
+            display: flex;
+            transition: 0.3s;
+            align-items: center;
+            text-decoration: none;
+            color: $color_test_sidebar;
+            justify-content: space-between;
+            font-size: $font_size_left_sidebar;
+
+            span {
+                gap: 8px;
+                display: flex;
+                align-items: center;
+            }
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    .sub-menu {
+        margin: 0;
+        transition: .3s;
+        overflow: hidden;
+        padding: 0 0 0 30px;
+
+        li {
+            list-style: none;
+
+            a {
+                gap: 3px;
+                padding: 3px;
+                display: flex;
+                transition: 0.3s;
+                justify-content: start;
+            }
+        }
+
+        &.hide {
+            height: 0px;
+        }
+    }
+}

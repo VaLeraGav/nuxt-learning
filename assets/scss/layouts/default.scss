@@ -1,0 +1,136 @@
+@use "../abstract/_admin_variables.scss" as *;
+@use "../abstract/_icons" as *;
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font_family_all;
+    background-color: $background_color;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    color: $color_test_sidebar;
+    background-color: $background_left_sidebar;
+    border-right: 1px solid #ccc;
+    position: fixed;
+    padding: $padding_elems;
+    height: 100vh;
+    transition: 0.5s;
+
+    .profile-block {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        .profile-preview {
+            width: 35px;
+            height: 35px;
+            background: $profile_color_ico;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        a {
+            color: #a7b1c2;
+            font-size: 16px;
+            text-decoration: none
+        }
+    }
+
+    &.hide {
+        width: 35px;
+    }
+}
+
+.sidebar.hidden {
+    width: 50px;
+}
+
+.sidebar-content {
+    display: block;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.sidebar-content.hidden {
+    display: none;
+}
+
+.sidebar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.sidebar-toggle:hover {
+    color: #000;
+}
+
+.main-content {
+    flex: 1;
+    padding-left: 281px;
+    overflow-y: scroll;
+    transition: .5s;
+
+    .wr-header {
+        height: 35px;
+        display: flex;
+        align-items: center;
+        padding: $padding_elems;
+        justify-content: space-between;
+        box-shadow: $admin-box-shadow;
+        background-color: $background_content_color;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .wr-menu-sidebar {
+        button {
+            border: none;
+            background: none;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &.hide {
+        padding-left: 66px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.title-page {
+    font-weight: 700;
+    font-size: 18px;
+    color: #8d8d8d;
+    font-family: arial;
+}
