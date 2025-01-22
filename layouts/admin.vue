@@ -1,5 +1,5 @@
-<!-- не используется так как дополнительные поля admin добавляется в default -->
 <template>
+    <!-- не используется так как дополнительные поля admin добавляется в default -->
     <div>
         <UiSidebarMenu :sidebarMenu="menuDataAdmin" />
     </div>
