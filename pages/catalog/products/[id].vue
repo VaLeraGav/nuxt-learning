@@ -2,7 +2,11 @@
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 
+// const { id } = useRoute().params;
+// productId =  $route.params.catalog_id
+
 const route = useRoute();
+
 const product = ref({});
 const error = ref(null);
 
@@ -30,6 +34,7 @@ onMounted(async () => {
 });
 
 </script>
+
 
 <template>
     <div v-if="error" class="error-message">
